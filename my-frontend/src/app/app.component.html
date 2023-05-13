@@ -1,0 +1,10 @@
+<input type="number" [(ngModel)]="myNumber">
+<button (click)="onAddNumber()">Add</button>
+<table>
+  <tr>
+    <th>Numbers</th>
+  </tr>
+  <tr *ngFor="let value of values">
+    <td>{{value}}</td>
+  </tr>
+</table>

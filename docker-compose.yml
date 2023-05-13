@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  my-proxy:
+    build: my-proxy
+    ports:
+      - "8080:80"
+  my-frontend:
+    build: my-frontend
+  my-backend:
+    build: my-backend
+    environment:
+      - ConnectionStrings__Default
+  my-database:
+    build: my-database
+    environment:
+      - MYSQL_ROOT_PASSWORD
